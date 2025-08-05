@@ -1,0 +1,1364 @@
+{
+    "macros": [
+        {
+            "name": "RAM128X1D",
+            "description": "128-Deep by 1-Wide Dual Port Random Access Memory (Select RAM)",
+            "ports": [
+                {
+                    "name": "DPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "SPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A",
+                    "direction": "input",
+                    "width": 7,
+                    "description": null
+                },
+                {
+                    "name": "DPRA",
+                    "direction": "input",
+                    "width": 7,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "128'h00000000000000000000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM128X1S",
+            "description": "128-Deep by 1-Wide Random Access Memory (Select RAM)",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A6",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "128'h00000000000000000000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM256X1S",
+            "description": "256-Deep by 1-Wide Random Access Memory (Select RAM)",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A",
+                    "direction": "input",
+                    "width": 8,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "256'h0000000000000000000000000000000000000000000000000000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM32M",
+            "description": "32-Deep by 8-bit Wide Multi Port Random Access Memory (Select RAM)",
+            "ports": [
+                {
+                    "name": "DOA",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DOB",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DOC",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DOD",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DIA",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DIB",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DIC",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DID",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "ADDRA",
+                    "direction": "input",
+                    "width": 5,
+                    "description": null
+                },
+                {
+                    "name": "ADDRB",
+                    "direction": "input",
+                    "width": 5,
+                    "description": null
+                },
+                {
+                    "name": "ADDRC",
+                    "direction": "input",
+                    "width": 5,
+                    "description": null
+                },
+                {
+                    "name": "ADDRD",
+                    "direction": "input",
+                    "width": 5,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT_A",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_B",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_C",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_D",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM32X1D",
+            "description": "32-Deep by 1-Wide Static Dual Port Synchronous RAM",
+            "ports": [
+                {
+                    "name": "DPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "SPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM32X1S",
+            "description": "32-Deep by 1-Wide Static Synchronous RAM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM32X1S_1",
+            "description": "32-Deep by 1-Wide Static Synchronous RAM with Negative-Edge Clock",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM32X2S",
+            "description": "32-Deep by 2-Wide Static Synchronous RAM",
+            "ports": [
+                {
+                    "name": "O0",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "O1",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT_00",
+                    "default": "32'h00000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_01",
+                    "default": "32'h00000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM64M",
+            "description": "64-Deep by 4-bit Wide Multi Port Random Access Memory (Select RAM)",
+            "ports": [
+                {
+                    "name": "DOA",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DOB",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DOC",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DOD",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "ADDRA",
+                    "direction": "input",
+                    "width": 6,
+                    "description": null
+                },
+                {
+                    "name": "ADDRB",
+                    "direction": "input",
+                    "width": 6,
+                    "description": null
+                },
+                {
+                    "name": "ADDRC",
+                    "direction": "input",
+                    "width": 6,
+                    "description": null
+                },
+                {
+                    "name": "ADDRD",
+                    "direction": "input",
+                    "width": 6,
+                    "description": null
+                },
+                {
+                    "name": "DIA",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DIB",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DIC",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DID",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT_A",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_B",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_C",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                },
+                {
+                    "name": "INIT_D",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM64X1D",
+            "description": "64-Deep by 1-Wide Dual Port Static Synchronous RAM",
+            "ports": [
+                {
+                    "name": "DPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "SPO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DPRA5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM64X1S",
+            "description": "64-Deep by 1-Wide Static Synchronous RAM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAM64X1S_1",
+            "description": "64-Deep by 1-Wide Static Synchronous RAM with Negative-Edge Clock",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "RAMB18E1",
+            "description": "18K-bit Configurable Synchronous Block RAM",
+            "ports": [
+                {
+                    "name": "ADDRARDADDR",
+                    "direction": "input",
+                    "width": 14,
+                    "description": null
+                },
+                {
+                    "name": "ADDRBWRADDR",
+                    "direction": "input",
+                    "width": 14,
+                    "description": null
+                },
+                {
+                    "name": "CLKARDCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CLKBWRCLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DIADI",
+                    "direction": "input",
+                    "width": 16,
+                    "description": null
+                },
+                {
+                    "name": "DIBDI",
+                    "direction": "input",
+                    "width": 16,
+                    "description": null
+                },
+                {
+                    "name": "DIPADIP",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DIPBDIP",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DOADO",
+                    "direction": "output",
+                    "width": 16,
+                    "description": null
+                },
+                {
+                    "name": "DOBDO",
+                    "direction": "output",
+                    "width": 16,
+                    "description": null
+                },
+                {
+                    "name": "DOPADOP",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "DOPBDOP",
+                    "direction": "output",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "ENARDEN",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "ENBWREN",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "REGCEAREGCE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "REGCEB",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "RSTRAMARSTRAM",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "RSTRAMB",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "RSTREGARSTREG",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "RSTREGB",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "WEA",
+                    "direction": "input",
+                    "width": 2,
+                    "description": null
+                },
+                {
+                    "name": "WEBWE",
+                    "direction": "input",
+                    "width": 4,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "RDADDR_COLLISION_HWCONFIG",
+                    "default": null,
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "ROM128X1",
+            "description": "128-Deep by 1-Wide ROM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A6",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "128'h00000000000000000000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "ROM256X1",
+            "description": "256-Deep by 1-Wide ROM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A6",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A7",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "256'h0000000000000000000000000000000000000000000000000000000000000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "ROM32X1",
+            "description": "32-Deep by 1-Wide ROM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": null
+                }
+            ]
+        },
+        {
+            "name": "ROM64X1",
+            "description": "64-Deep by 1-Wide ROM",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": null
+                }
+            ]
+        }
+    ]
+}

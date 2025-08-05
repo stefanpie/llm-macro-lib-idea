@@ -1,0 +1,599 @@
+{
+    "macros": [
+        {
+            "name": "CARRY4",
+            "description": "Fast Carry Logic with Look Ahead",
+            "ports": [
+                {
+                    "name": "CO",
+                    "direction": "output",
+                    "width": 4,
+                    "description": null
+                },
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 4,
+                    "description": null
+                },
+                {
+                    "name": "CI",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CYINIT",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "DI",
+                    "direction": "input",
+                    "width": 4,
+                    "description": null
+                },
+                {
+                    "name": "S",
+                    "direction": "input",
+                    "width": 4,
+                    "description": null
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "name": "CFGLUT5",
+            "description": "5-input Dynamically Reconfigurable Look-Up Table (LUT)",
+            "ports": [
+                {
+                    "name": "O6",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "O5",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CDO",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CDI",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": "Specifies the initial logical expression of this element."
+                }
+            ]
+        },
+        {
+            "name": "LUT1",
+            "description": "1-Bit Look-Up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "2'b00",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT2",
+            "description": "2-Bit Look-Up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "4'h0",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT3",
+            "description": "3-Bit Look-Up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "8'h00",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT4",
+            "description": "4-Bit Look-Up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "16'h0000",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT5",
+            "description": "5-Input look-up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT6",
+            "description": "6-Input Look-Up Table with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": "Initializes look-up tables."
+                }
+            ]
+        },
+        {
+            "name": "LUT6_2",
+            "description": "Six-input, 2-output, Look-Up Table",
+            "ports": [
+                {
+                    "name": "O6",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "O5",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I4",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I5",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "64'h0000000000000000",
+                    "description": "Specifies the LUT5/6 output function."
+                }
+            ]
+        },
+        {
+            "name": "MUXF7",
+            "description": "2-to-1 Look-Up Table Multiplexer with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "S",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "name": "MUXF8",
+            "description": "2-to-1 Look-Up Table Multiplexer with General Output",
+            "ports": [
+                {
+                    "name": "O",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "I1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "S",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": []
+        },
+        {
+            "name": "SRL16E",
+            "description": "16-Bit Shift Register Look-Up Table (LUT) with Clock Enable",
+            "ports": [
+                {
+                    "name": "Q",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A0",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A1",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A2",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A3",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "16'h0000",
+                    "description": "Specifies the initial contents in the shift register upon completion of configuration."
+                }
+            ]
+        },
+        {
+            "name": "SRLC32E",
+            "description": "32 Clock Cycle, Variable Length Shift Register Look-Up Table (LUT) with Clock Enable",
+            "ports": [
+                {
+                    "name": "Q",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "Q31",
+                    "direction": "output",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "A",
+                    "direction": "input",
+                    "width": 5,
+                    "description": null
+                },
+                {
+                    "name": "CE",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "CLK",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                },
+                {
+                    "name": "D",
+                    "direction": "input",
+                    "width": 1,
+                    "description": null
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "INIT",
+                    "default": "32'h00000000",
+                    "description": "Specifies the initial contents in the shift register upon completion of configuration."
+                }
+            ]
+        }
+    ]
+}
